@@ -19,17 +19,23 @@ b = float(input())
 time.sleep(1)
 print('Which operation do you want to perform?')
 time.sleep(1)
-print('Press 1 for + ,Press 2 for - ,Press 3 for x, Press 4 for /')
+print('addition, substraction, multiplication or division')
 time.sleep(1)
-c = int(input())
+c = str(input())
 print('your answer is ')
-if c == 1:
+if c == 'addition':
     print(a+b)
-elif c == 2:
+elif c == 'substraction':
     print(a-b)
-elif c == 3:
+elif c == 'multiplication':
     print(a*b)
-elif c == 4:
+elif c == 'division':
     print(a/b)
 else: 
     print('Operation value is invalid')
+print('do you want to close or start again?')
+d = str(input())
+if d == 'close':
+    sys.exit()
+elif d == 'start':
+    os.execl(sys.executable, sys.executable, *sys.argv)
